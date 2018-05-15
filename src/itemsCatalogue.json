@@ -1,0 +1,100 @@
+  {
+  "1": {
+    "name": "Mouse",
+    "price": 200,
+    "imagePath": "mouse.jpg",
+    "id": 1,
+    "description":""
+  },
+  "2": {
+    "name": "Keyboard",
+    "price": 500,
+    "imagePath": "keyboard.png",
+    "id": 2,
+    "description":""
+  },
+  "3": {
+    "name": "Headphones",
+    "price": 234,
+    "imagePath": "one.jpg",
+    "id": 3,
+    "description":""
+  },
+  "4": {
+    "name": "Water bottle",
+    "price": 34,
+    "imagePath": "bottle.jpg",
+    "id": 4,
+    "description":""
+  },
+  "5": {
+    "name": "Chair",
+    "price": 435,
+    "imagePath": "two.jpg",
+    "id": 5,
+    "description":""
+  },
+  "6": {
+    "name": "Door",
+    "price": 300,
+    "imagePath": "three.jpg",
+    "id": 6,
+    "description":""
+  },
+  "7": {
+    "name": "Laptop",
+    "price": 567,
+    "imagePath": "four.jpg",
+    "id": 7,
+    "description":""
+  },
+  "8": {
+    "name": "Wardrobe",
+    "price": 786,
+    "imagePath": "five.jpg",
+    "id": 8,
+    "description":""
+  },
+  "9": {
+    "name": "Fan",
+    "price": 45,
+    "imagePath": "six.jpg",
+    "id": 9,
+    "description":""
+  },
+  "10": {
+    "name": "Ballon",
+    "price": 45,
+    "imagePath": "seven.jpg",
+    "id": 10,
+    "description":""
+  },
+  "11": {
+    "name": "Camera",
+    "price": 4578,
+    "imagePath": "eight.jpg",
+    "id": 11,
+    "description":""
+  },
+  "12": {
+    "name": "Remote",
+    "price": 384,
+    "imagePath": "nine.jpg",
+    "id": 12,
+    "description":""
+  },
+  "13": {
+    "name": "Speaker",
+    "price": 34,
+    "imagePath": "ten.jpg",
+    "id": 13,
+    "description":""
+  },
+  "14": {
+    "name": "Television",
+    "price": 14,
+    "imagePath": "eleven.jpg",
+    "id": 14,
+    "description":""
+  }
+}
