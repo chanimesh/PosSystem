@@ -1,5 +1,5 @@
 import imagePaths from '../constants/imagePaths';
-import shopItems from '../constants/htmlElements';
+import { shopItems } from '../constants/htmlElements';
 
 function addItemToHtml(data, id) {
 

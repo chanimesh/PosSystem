@@ -1,4 +1,8 @@
 const shopItems = document.getElementById('shop-items');
+const billItems = document.getElementById('bill-items');
 
 
-export default shopItems;
+export {
+    shopItems,
+    billItems,
+};
