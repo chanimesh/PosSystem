@@ -1,0 +1,15 @@
+.pos-system {
+  .shop-items {
+    width: 60vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .shop-item {
+      width: 200px;
+      border: 1px solid black;
+      .shop-item-image {
+        max-width: 100%;
+      }
+    }
+  }
+}

@@ -1,5 +1,6 @@
 import itemsCatalogue from './itemsCatalogue';
 import addItemToHtml from './js/addItemToHtml';
+import './styles/catalogueDisplay.scss';
 
 
 
