@@ -1,5 +1,6 @@
 import shoppingCart from './shoppingCart';
 import populateCart from "./populateCart";
+import appendSubtotal from "./appendSubtotal";
 
 function addItemToCart(e) {
     let itemIdToAdd;
@@ -18,6 +19,7 @@ function addItemToCart(e) {
     shoppingCart[itemIdToAdd].quantity += 1;
 
     populateCart();
+    appendSubtotal();
 }
 
 export default addItemToCart;

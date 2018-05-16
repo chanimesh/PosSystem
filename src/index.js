@@ -4,6 +4,7 @@ import './styles/catalogueDisplay.scss';
 import populateCart from './js/populateCart';
 import './styles/main.scss';
 import addEventsToCatalogue from './js/addEventsToCatalogue';
+import appendSubtotal from "./js/appendSubtotal";
 
 
 
@@ -14,3 +15,5 @@ for(let item in itemsCatalogue){
 populateCart();
 
 addEventsToCatalogue();
+
+appendSubtotal();
