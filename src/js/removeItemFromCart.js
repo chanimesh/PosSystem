@@ -2,6 +2,7 @@ import shoppingCart from './shoppingCart';
 import populateCart from "./populateCart";
 import appendSubtotal from "./appendSubtotal";
 import appendDiscount from "./appendDiscount";
+import appendTotal from "./appendTotal";
 
 function removeItemFromCart(e) {
 
@@ -16,6 +17,7 @@ function removeItemFromCart(e) {
     populateCart();
     appendSubtotal()
     appendDiscount();
+    appendTotal();
 
 }
 

@@ -6,6 +6,7 @@ import './styles/main.scss';
 import addEventsToCatalogue from './js/addEventsToCatalogue';
 import appendSubtotal from "./js/appendSubtotal";
 import appendDiscount from "./js/appendDiscount";
+import appendTotal from "./js/appendTotal";
 
 
 
@@ -20,3 +21,5 @@ addEventsToCatalogue();
 appendSubtotal();
 
 appendDiscount();
+
+appendTotal();
