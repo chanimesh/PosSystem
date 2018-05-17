@@ -5,6 +5,7 @@ import populateCart from './js/populateCart';
 import './styles/main.scss';
 import addEventsToCatalogue from './js/addEventsToCatalogue';
 import appendSubtotal from "./js/appendSubtotal";
+import appendDiscount from "./js/appendDiscount";
 
 
 
@@ -17,3 +18,5 @@ populateCart();
 addEventsToCatalogue();
 
 appendSubtotal();
+
+appendDiscount();
