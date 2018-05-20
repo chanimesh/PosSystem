@@ -8,28 +8,77 @@
     border-radius: 10px;
     .cart-item-header{
       display: flex;
+      font-family: "Raleway", sans-serif;
+      font-size: 15px;
       .cart-item-name-header{
+        box-sizing: border-box;
+        padding: 0 0 0 25px;
+        width: 30%;
       }
       .cart-item-quantity-header{
+        width: 30%;
       }
       .cart-item-cost-header{
+        width: 20%;
       }
       .cart-item-total-header{
+        width: 20%;
       }
     }
     .cart-items-list{
       padding: 0;
+      font-size: 14px;
       .cart-item{
-        padding: 15px 0px ;
+        padding: 5px 0px ;
         display: flex;
+        .cart-item-index{
+          width: 25px;
+        }
         .cart-item-name{
+          width: 28%;
         }
         .cart-item-quantity{
+          width: 30%;
         }
         .cart-item-cost{
+          width: 20%;
         }
         .cart-item-total{
+          width: 20%;
         }
+      }
+    }
+    .sub-total{
+      display: flex;
+      margin: 0 0 10px 0;
+      .sub-total-label{
+        width: 30%;
+        font-weight: 600;
+      }
+      .sub-total-value{
+
+      }
+    }
+    .discount{
+      display: flex;
+      margin: 0 0 10px 0;
+      .discount-label{
+        width: 30%;
+        font-weight: 600;
+      }
+      .discount-value{
+
+      }
+    }
+    .total{
+      display: flex;
+      margin: 0 0 10px 0;
+      .total-label{
+        width: 30%;
+        font-weight: 600;
+      }
+      .total-value{
+
       }
     }
   }

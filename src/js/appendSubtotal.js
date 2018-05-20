@@ -13,13 +13,13 @@ function appendSubtotal(){
 
         const subTotalLabel = document.createElement('span');
         subTotalLabel.setAttribute('class', 'sub-total-label');
-        const subTotalLabelText = document.createTextNode('Subtotal');
+        const subTotalLabelText = document.createTextNode('Subtotal:');
         subTotalLabel.appendChild(subTotalLabelText);
 
 
         const subTotalText = document.createElement('span');
-        subTotalText.setAttribute('class', 'sub-total-text');
-        subTotalText.setAttribute('id', 'sub-total-text');
+        subTotalText.setAttribute('class', 'sub-total-value');
+        subTotalText.setAttribute('id', 'sub-total-value');
         const subTotalTextData = document.createTextNode(subTotal.toString());
         subTotalText.appendChild(subTotalTextData);
 
@@ -29,7 +29,7 @@ function appendSubtotal(){
         billItems.appendChild(subTotalSpan);
     }
     else{
-        document.getElementById('sub-total-text').innerHTML = subTotal.toString();
+        document.getElementById('sub-total-value').innerHTML = subTotal.toString();
     }
 }
 

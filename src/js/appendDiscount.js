@@ -11,7 +11,7 @@ function appendDiscount(){
     const total = getRemaining(discount, subtotal);
 
     const discountDiv = document.createElement('div');
-    discountDiv.setAttribute('class','discount-value');
+    discountDiv.setAttribute('class','discount');
 
     const discountLabel = document.createElement('span');
     discountLabel.setAttribute('class','discount-label');
