@@ -1,8 +1,19 @@
+import {getPercent, getRemaining} from "percentagecalcualtor";
 import itemsCatalogue from '../itemsCatalogue';
 import addItemToCart from "./addItemToCart";
 import removeItemFromCart from "./removeItemFromCart";
+import roundDecimal from "./utilities/roundDecimal";
 
 function appendCartItems(itemId, quantity) {
+
+    const cartItemDiscountValue = Number(
+        roundDecimal(
+        getPercent(itemsCatalogue[itemId].price * quantity, itemsCatalogue[itemId].discount)))
+        .toFixed(2);
+    const cartItemCostValue = Number(
+        roundDecimal(
+        getRemaining(itemsCatalogue[itemId].discount, itemsCatalogue[itemId].price * quantity)))
+        .toFixed(2);
 
     const cartItem = document.createElement('li');
     cartItem.setAttribute('class','cart-item');
@@ -28,6 +39,7 @@ function appendCartItems(itemId, quantity) {
 
     const cartItemQuantityPlus = document.createElement('button');
     cartItemQuantityPlus.setAttribute('id','plusitem-'+itemId);
+    cartItemQuantityPlus.setAttribute('class','plus');
     const cartItemQuantityPlusText = document.createTextNode('+');
     cartItemQuantityPlus.appendChild(cartItemQuantityPlusText);
     cartItemQuantityPlus.addEventListener('click', addItemToCart);
@@ -39,7 +51,8 @@ function appendCartItems(itemId, quantity) {
 
     const cartItemQuantityMinus = document.createElement('button');
     const cartItemQuantityMinusText = document.createTextNode('-');
-    cartItemQuantityMinus.setAttribute('id','plusitem-'+itemId);
+    cartItemQuantityMinus.setAttribute('id','minusitem-'+itemId);
+    cartItemQuantityMinus.setAttribute('class','minus');
     cartItemQuantityMinus.appendChild(cartItemQuantityMinusText);
     cartItemQuantityMinus.addEventListener('click', removeItemFromCart);
 
@@ -49,19 +62,26 @@ function appendCartItems(itemId, quantity) {
 
     const cartItemCost = document.createElement('span');
     cartItemCost.setAttribute('class','cart-item-cost');
-    const cartItemCostText = document.createTextNode((itemsCatalogue[itemId].price).toString());
+    const cartItemCostText = document.createTextNode(Number(itemsCatalogue[itemId].price).toFixed(2));
     cartItemCost.appendChild(cartItemCostText);
+
+    const cartItemDiscount = document.createElement('span');
+    cartItemDiscount.setAttribute('class','cart-item-discount');
+    const cartItemDiscountText = document.createTextNode(cartItemDiscountValue);
+    cartItemDiscount.appendChild(cartItemDiscountText);
 
 
     const cartItemTotal = document.createElement('span');
     cartItemTotal.setAttribute('class','cart-item-total');
-    const cartItemTotalText = document.createTextNode((itemsCatalogue[itemId].price * quantity).toString());
+    const cartItemTotalText = document.createTextNode(cartItemCostValue.toString());
     cartItemTotal.appendChild(cartItemTotalText);
 
     cartItem.appendChild(cartItemIndex);
     cartItem.appendChild(cartItemName);
     cartItem.appendChild(cartItemQuantityDiv);
     cartItem.appendChild(cartItemCost);
+    cartItem.appendChild(cartItemDiscount);
+
     cartItem.appendChild(cartItemTotal);
     document.getElementById('cart-items-list').appendChild(cartItem);
 

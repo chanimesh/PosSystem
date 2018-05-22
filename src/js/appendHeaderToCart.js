@@ -27,6 +27,11 @@ function appendHeaderToCart() {
         const cartItemCostTextHeader = document.createTextNode('Price');
         cartItemCostHeader.appendChild(cartItemCostTextHeader);
 
+        const cartItemDiscountHeader = document.createElement('span');
+        cartItemDiscountHeader.setAttribute('class','cart-item-discount-header');
+        const cartItemDiscountTextHeader = document.createTextNode('Discount');
+        cartItemDiscountHeader.appendChild(cartItemDiscountTextHeader);
+
         const cartItemTotalHeader = document.createElement('span');
         cartItemTotalHeader.setAttribute('class','cart-item-total-header');
         const cartItemTotalTextHeader = document.createTextNode('Total');
@@ -35,6 +40,7 @@ function appendHeaderToCart() {
         cartItemHeader.appendChild(cartItemNameHeader);
         cartItemHeader.appendChild(cartItemQuantityHeader);
         cartItemHeader.appendChild(cartItemCostHeader);
+        cartItemHeader.appendChild(cartItemDiscountHeader);
         cartItemHeader.appendChild(cartItemTotalHeader);
 
         billItems.appendChild(cartItemHeader);

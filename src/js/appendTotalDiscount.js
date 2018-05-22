@@ -1,14 +1,14 @@
-import calculateSubtotal from "./calculateSubtotal";
 import shoppingCart from "./shoppingCart";
 import discount from "../constants/discount";
-import {getPercent, getRemaining} from "percentagecalcualtor";
 import { billItems } from '../constants/htmlElements';
+import calculateTotalDiscount from "./calculateTotalDiscount";
+import itemsCatalogue from '../itemsCatalogue';
 
 
-function appendDiscount(){
-    const subtotal = calculateSubtotal(shoppingCart);
-    const totalDiscount = getPercent(discount, subtotal);
-    const total = getRemaining(discount, subtotal);
+function appendTotalDiscount(){
+    const totalDiscount = Number(
+        calculateTotalDiscount(itemsCatalogue, shoppingCart))
+        .toFixed(2);
 
     const discountDiv = document.createElement('div');
     discountDiv.setAttribute('class','discount');
@@ -30,4 +30,4 @@ function appendDiscount(){
 
 }
 
-export default appendDiscount;
+export default appendTotalDiscount;

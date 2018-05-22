@@ -3,7 +3,7 @@ import  calculateSubtotal from './calculateSubtotal';
 import shoppingCart from "./shoppingCart";
 
 function appendSubtotal(){
-    let subTotal = calculateSubtotal(shoppingCart);
+    let subTotal = Number(calculateSubtotal(shoppingCart)).toFixed(2);
 
     if(!document.getElementById('sub-total')) {
 
