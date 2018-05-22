@@ -34,14 +34,15 @@
       .cart-item{
         padding: 5px 0 ;
         display: flex;
+        flex-wrap: wrap;
         .cart-item-index{
           width: 25px;
         }
         .cart-item-name{
-          width: 22%;
+          width: 30%;
         }
         .cart-item-quantity{
-          width: 20%;
+          width: 30%;
           .plus,
           .minus
           {
@@ -49,10 +50,10 @@
           }
         }
         .cart-item-cost{
-          width: 14%;
+          width: 20%;
         }
         .cart-item-discount{
-          width: 15%;
+          width: 20%;
         }
         .cart-item-total{
           width: 20%;

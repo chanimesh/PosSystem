@@ -3,6 +3,7 @@ import itemsCatalogue from '../itemsCatalogue';
 import addItemToCart from "./addItemToCart";
 import removeItemFromCart from "./removeItemFromCart";
 import roundDecimal from "./utilities/roundDecimal";
+import updateCart from "./updateCart";
 
 function appendCartItems(itemId, quantity) {
 
@@ -44,10 +45,14 @@ function appendCartItems(itemId, quantity) {
     cartItemQuantityPlus.appendChild(cartItemQuantityPlusText);
     cartItemQuantityPlus.addEventListener('click', addItemToCart);
 
-    const cartItemQuantity = document.createElement('span');
+    const cartItemQuantity = document.createElement('input');
     cartItemQuantity.setAttribute('class','cart-item-quantity');
-    const cartItemQuantityText = document.createTextNode((quantity).toString());
-    cartItemQuantity.appendChild(cartItemQuantityText);
+    cartItemQuantity.setAttribute('data-value', itemId);
+    cartItemQuantity.setAttribute('type','number');
+    cartItemQuantity.setAttribute('step','1');
+    cartItemQuantity.setAttribute('min','0');
+    cartItemQuantity.setAttribute('value', quantity);
+    cartItemQuantity.addEventListener('change', updateCart)
 
     const cartItemQuantityMinus = document.createElement('button');
     const cartItemQuantityMinusText = document.createTextNode('-');
