@@ -58,6 +58,13 @@
         .cart-item-total{
           width: 20%;
         }
+        .delete-item{
+          width: 20px;
+          height: 20px;
+          background-image: url("../assets/icons/delete.svg");
+          background-position: 100% 100%;
+          background-size: 100% 100%;
+        }
       }
     }
     .sub-total{

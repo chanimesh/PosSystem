@@ -1,8 +1,5 @@
 import shoppingCart from './shoppingCart';
-import populateCart from "./populateCart";
-import appendSubtotal from "./appendSubtotal";
-import appendTotalDiscount from "./appendTotalDiscount";
-import appendTotal from "./appendTotal";
+import appendElementsToCart from "./appendElementsToCart";
 
 function updateCart(e) {
 
@@ -10,10 +7,7 @@ function updateCart(e) {
 
     shoppingCart[itemId].quantity = parseFloat(e.target.value);
 
-    populateCart();
-    appendSubtotal()
-    appendTotalDiscount();
-    appendTotal();
+    appendElementsToCart();
 
 }
 

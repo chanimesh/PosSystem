@@ -4,6 +4,7 @@ import addItemToCart from "./addItemToCart";
 import removeItemFromCart from "./removeItemFromCart";
 import roundDecimal from "./utilities/roundDecimal";
 import updateCart from "./updateCart";
+import deleteItem from "./deleteItem";
 
 function appendCartItems(itemId, quantity) {
 
@@ -81,6 +82,11 @@ function appendCartItems(itemId, quantity) {
     const cartItemTotalText = document.createTextNode(cartItemCostValue.toString());
     cartItemTotal.appendChild(cartItemTotalText);
 
+    const cartItemDelete = document.createElement('span');
+    cartItemDelete.setAttribute('data-id',itemId);
+    cartItemDelete.setAttribute('class', 'delete-item');
+    cartItemDelete.addEventListener('click', deleteItem)
+
     cartItem.appendChild(cartItemIndex);
     cartItem.appendChild(cartItemName);
     cartItem.appendChild(cartItemQuantityDiv);
@@ -88,6 +94,7 @@ function appendCartItems(itemId, quantity) {
     cartItem.appendChild(cartItemDiscount);
 
     cartItem.appendChild(cartItemTotal);
+    cartItem.appendChild(cartItemDelete);
     document.getElementById('cart-items-list').appendChild(cartItem);
 
 }

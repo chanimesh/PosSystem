@@ -1,8 +1,5 @@
 import shoppingCart from './shoppingCart';
-import populateCart from "./populateCart";
-import appendSubtotal from "./appendSubtotal";
-import appendTotalDiscount from "./appendTotalDiscount";
-import appendTotal from "./appendTotal";
+import appendElementsToCart from "./appendElementsToCart";
 
 function removeItemFromCart(e) {
 
@@ -14,11 +11,7 @@ function removeItemFromCart(e) {
     if (shoppingCart[itemIdToAdd].quantity!=0)
       shoppingCart[itemIdToAdd].quantity -= 1;
 
-    populateCart();
-    appendSubtotal()
-    appendTotalDiscount();
-    appendTotal();
-
+    appendElementsToCart();
 }
 
 export default removeItemFromCart;

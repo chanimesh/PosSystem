@@ -7,7 +7,7 @@ import { billItems } from '../constants/htmlElements';
 
 function appendTotal(){
     const subtotal = calculateSubtotal(shoppingCart);
-    const total = getRemaining(discount, subtotal);
+    const total = Number(getRemaining(discount, subtotal)).toFixed(2);
 
     const totalDiv = document.createElement('div');
     totalDiv.setAttribute('class','total');
