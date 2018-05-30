@@ -1,9 +1,9 @@
 import itemsCatalogue from './itemsCatalogue';
-import addItemToHtml from './js/addItemToHtml';
-import './styles/catalogueDisplay.scss';
+import addItemToHtml from './js/catalogue/addItemToHtml';
+import './js/catalogue/catalogueDisplay.scss';
 import './styles/main.scss';
-import addEventsToCatalogue from './js/addEventsToCatalogue';
-import appendElementsToCart from "./js/appendElementsToCart";
+import addEventsToCatalogue from './js/catalogue/addEventsToCatalogue';
+import appendElementsToCart from "./js/shoppingCart/appendElementsToCart";
 
 
 

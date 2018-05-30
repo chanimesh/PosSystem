@@ -1,5 +1,5 @@
-import { billItems } from '../constants/htmlElements';
-import '../styles/cartDisplay.scss';
+import { billItems } from '../../constants/htmlElements';
+import './cartDisplay.scss';
 
 function appendHeaderToCart() {
     if (!document.getElementById('cart-items-list')) {

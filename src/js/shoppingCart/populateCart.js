@@ -1,4 +1,4 @@
-import { billItems } from '../constants/htmlElements';
+import { billItems } from '../../constants/htmlElements';
 import appendCartItems from "./appendCartItems";
 import shoppingCart from "./shoppingCart";
 import appendHeaderToCart from "./appendHeaderToCart";

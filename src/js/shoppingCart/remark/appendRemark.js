@@ -1,4 +1,6 @@
-import {billItems} from "../constants/htmlElements";
+import {billItems} from "../../../constants/htmlElements";
+import remarkChange from './remarkChange';
+import remark from "./remarkData";
 
 function appendRemark() {
     if(!document.getElementById('remark')) {
@@ -16,6 +18,8 @@ function appendRemark() {
         const remarkInput = document.createElement('input');
         remarkInput.setAttribute('class', 'remark-value');
         remarkInput.setAttribute('id', 'remark-value');
+        remarkInput.setAttribute('value', remark);
+        remarkInput.addEventListener('change', remarkChange);
 
         remarkDiv.appendChild(remarkLabel);
         remarkDiv.appendChild(remarkInput);

@@ -1,8 +1,8 @@
-import shoppingCart from "./shoppingCart";
-import discount from "../constants/discount";
-import { billItems } from '../constants/htmlElements';
-import calculateTotalDiscount from "./calculateTotalDiscount";
-import itemsCatalogue from '../itemsCatalogue';
+import shoppingCart from "../shoppingCart";
+import discount from "../../../constants/discount";
+import { billItems } from '../../../constants/htmlElements';
+import calculateTotalDiscount from "../total/calculateTotalDiscount";
+import itemsCatalogue from '../../../itemsCatalogue';
 
 
 function appendTotalDiscount(){

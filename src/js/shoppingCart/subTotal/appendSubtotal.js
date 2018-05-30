@@ -1,6 +1,6 @@
-import { billItems } from '../constants/htmlElements';
+import { billItems } from '../../../constants/htmlElements';
 import  calculateSubtotal from './calculateSubtotal';
-import shoppingCart from "./shoppingCart";
+import shoppingCart from "../shoppingCart";
 
 function appendSubtotal(){
     let subTotal = Number(calculateSubtotal(shoppingCart)).toFixed(2);

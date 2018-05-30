@@ -1,4 +1,4 @@
-import itemsCatalogue from '../itemsCatalogue';
+import itemsCatalogue from '../../../itemsCatalogue';
 
 function calculateSubtotal(shoppingCart) {
     let subTotal = 0;

@@ -1,8 +1,8 @@
-import calculateSubtotal from "./calculateSubtotal";
-import shoppingCart from "./shoppingCart";
-import discount from "../constants/discount";
+import calculateSubtotal from "../subTotal/calculateSubtotal";
+import shoppingCart from "../shoppingCart";
+import discount from "../../../constants/discount";
 import {getPercent, getRemaining} from "percentagecalcualtor";
-import { billItems } from '../constants/htmlElements';
+import { billItems } from '../../../constants/htmlElements';
 
 
 function appendTotal(){

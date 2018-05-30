@@ -1,5 +1,5 @@
-import shoppingCart from './shoppingCart';
-import appendElementsToCart from "./appendElementsToCart";
+import shoppingCart from '../shoppingCart';
+import appendElementsToCart from "../appendElementsToCart";
 
 function addItemToCart(e) {
     let itemIdToAdd;

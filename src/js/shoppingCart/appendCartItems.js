@@ -1,10 +1,10 @@
 import {getPercent, getRemaining} from "percentagecalcualtor";
-import itemsCatalogue from '../itemsCatalogue';
-import addItemToCart from "./addItemToCart";
-import removeItemFromCart from "./removeItemFromCart";
-import roundDecimal from "./utilities/roundDecimal";
-import updateCart from "./updateCart";
-import deleteItem from "./deleteItem";
+import itemsCatalogue from '../../itemsCatalogue';
+import addItemToCart from "./cartItemQuantityActions/addItemToCart";
+import removeItemFromCart from "./cartItemQuantityActions/removeItemFromCart";
+import roundDecimal from "../utilities/roundDecimal";
+import updateCart from "./cartItemQuantityActions/updateCart";
+import deleteItem from "./cartItemQuantityActions/deleteItem";
 
 function appendCartItems(itemId, quantity) {
 
@@ -53,7 +53,7 @@ function appendCartItems(itemId, quantity) {
     cartItemQuantity.setAttribute('step','1');
     cartItemQuantity.setAttribute('min','0');
     cartItemQuantity.setAttribute('value', quantity);
-    cartItemQuantity.addEventListener('change', updateCart)
+    cartItemQuantity.addEventListener('change', updateCart);
 
     const cartItemQuantityMinus = document.createElement('button');
     const cartItemQuantityMinusText = document.createTextNode('-');
