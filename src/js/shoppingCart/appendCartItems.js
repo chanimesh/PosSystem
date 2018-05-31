@@ -5,6 +5,7 @@ import removeItemFromCart from "./cartItemQuantityActions/removeItemFromCart";
 import roundDecimal from "../utilities/roundDecimal";
 import updateCart from "./cartItemQuantityActions/updateCart";
 import deleteItem from "./cartItemQuantityActions/deleteItem";
+import {createElement} from "../utilities/htmlGeneration";
 
 function appendCartItems(itemId, quantity) {
 
@@ -26,66 +27,42 @@ function appendCartItems(itemId, quantity) {
     if(currentIndex.length){
         currentIndexValue = parseInt(currentIndex[currentIndex.length - 1].innerHTML) + 1;
     }
-    const cartItemIndex = document.createElement('span');
-    cartItemIndex.setAttribute('class','cart-item-index');
-    const cartItemIndexText = document.createTextNode(currentIndexValue.toString());
-    cartItemIndex.appendChild(cartItemIndexText);
 
-    const cartItemName = document.createElement('span');
-    cartItemName.setAttribute('class','cart-item-name');
-    const cartItemNameText = document.createTextNode(itemsCatalogue[itemId].name);
-    cartItemName.appendChild(cartItemNameText);
+    const cartItemIndex = createElement('span', {class: 'cart-item-index'}, currentIndexValue);
 
-    const cartItemQuantityDiv = document.createElement('div');
-    cartItemQuantityDiv.setAttribute('class','cart-item-quantity');
+    const cartItemName = createElement('span', {class: 'cart-item-name'}, itemsCatalogue[itemId].name);
 
-    const cartItemQuantityPlus = document.createElement('button');
-    cartItemQuantityPlus.setAttribute('id','plusitem-'+itemId);
-    cartItemQuantityPlus.setAttribute('class','plus');
-    const cartItemQuantityPlusText = document.createTextNode('+');
-    cartItemQuantityPlus.appendChild(cartItemQuantityPlusText);
-    cartItemQuantityPlus.addEventListener('click', addItemToCart);
+    const cartItemQuantityDiv = createElement('div', {class: 'cart-item-quantity'});
 
-    const cartItemQuantity = document.createElement('input');
-    cartItemQuantity.setAttribute('class','cart-item-quantity');
-    cartItemQuantity.setAttribute('data-value', itemId);
-    cartItemQuantity.setAttribute('type','number');
-    cartItemQuantity.setAttribute('step','1');
-    cartItemQuantity.setAttribute('min','0');
-    cartItemQuantity.setAttribute('value', quantity);
-    cartItemQuantity.addEventListener('change', updateCart);
+    const cartItemQuantityPlus = createElement('button',
+        {id: 'plusitem-'+itemId, class: 'plus'},
+        '+',
+        {click: addItemToCart} );
 
-    const cartItemQuantityMinus = document.createElement('button');
-    const cartItemQuantityMinusText = document.createTextNode('-');
-    cartItemQuantityMinus.setAttribute('id','minusitem-'+itemId);
-    cartItemQuantityMinus.setAttribute('class','minus');
-    cartItemQuantityMinus.appendChild(cartItemQuantityMinusText);
-    cartItemQuantityMinus.addEventListener('click', removeItemFromCart);
+    const cartItemQuantity = createElement('input',
+        {class: 'cart-item-quantity', ['data-value']: itemId, type:'number', step:'1', min: '0', value: quantity},
+        undefined,
+        {change: updateCart} );
+
+    const cartItemQuantityMinus = createElement('button',
+        {id: 'minusitem-'+itemId, class: 'minus'},
+        '+',
+        {click: removeItemFromCart} );
 
     cartItemQuantityDiv.appendChild(cartItemQuantityMinus);
     cartItemQuantityDiv.appendChild(cartItemQuantity);
     cartItemQuantityDiv.appendChild(cartItemQuantityPlus);
 
-    const cartItemCost = document.createElement('span');
-    cartItemCost.setAttribute('class','cart-item-cost');
-    const cartItemCostText = document.createTextNode(Number(itemsCatalogue[itemId].price).toFixed(2));
-    cartItemCost.appendChild(cartItemCostText);
+    const cartItemCost = createElement('span', {class: 'cart-item-cost'}, Number(itemsCatalogue[itemId].price).toFixed(2));
 
-    const cartItemDiscount = document.createElement('span');
-    cartItemDiscount.setAttribute('class','cart-item-discount');
-    const cartItemDiscountText = document.createTextNode(cartItemDiscountValue);
-    cartItemDiscount.appendChild(cartItemDiscountText);
+    const cartItemDiscount = createElement('span', {class: 'cart-item-discount'}, cartItemDiscountValue);
 
+    const cartItemTotal = createElement('span', {class: 'cart-item-total'}, cartItemCostValue);
 
-    const cartItemTotal = document.createElement('span');
-    cartItemTotal.setAttribute('class','cart-item-total');
-    const cartItemTotalText = document.createTextNode(cartItemCostValue.toString());
-    cartItemTotal.appendChild(cartItemTotalText);
-
-    const cartItemDelete = document.createElement('span');
-    cartItemDelete.setAttribute('data-id',itemId);
-    cartItemDelete.setAttribute('class', 'delete-item');
-    cartItemDelete.addEventListener('click', deleteItem)
+    const cartItemDelete = createElement('span',
+        {class: 'delete-item', ['data-id']: itemId},
+        undefined,
+        {click: deleteItem});
 
     cartItem.appendChild(cartItemIndex);
     cartItem.appendChild(cartItemName);
