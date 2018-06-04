@@ -5,7 +5,8 @@
     "imagePath": "mouse.jpg",
     "id": 1,
     "description":"",
-    "discount": 4
+    "discount": 4,
+    "availableStock": 5
   },
   "2": {
     "name": "Keyboard",
@@ -13,7 +14,8 @@
     "imagePath": "keyboard.png",
     "id": 2,
     "description":"",
-    "discount": 3
+    "discount": 3,
+    "availableStock": 6
   },
   "3": {
     "name": "Headphones",
@@ -21,7 +23,8 @@
     "imagePath": "one.jpg",
     "id": 3,
     "description":"",
-    "discount": 8
+    "discount": 8,
+    "availableStock": 2
   },
   "4": {
     "name": "Water bottle",
@@ -29,7 +32,8 @@
     "imagePath": "bottle.jpg",
     "id": 4,
     "description":"",
-    "discount": 1
+    "discount": 1,
+    "availableStock": 3
   },
   "5": {
     "name": "Chair",
@@ -37,7 +41,8 @@
     "imagePath": "two.jpg",
     "id": 5,
     "description":"",
-    "discount": 8
+    "discount": 8,
+    "availableStock": 6
   },
   "6": {
     "name": "Door",
@@ -45,7 +50,8 @@
     "imagePath": "three.jpg",
     "id": 6,
     "description":"",
-    "discount": 7
+    "discount": 7,
+    "availableStock": 7
   },
   "7": {
     "name": "Laptop",
@@ -53,7 +59,8 @@
     "imagePath": "four.jpg",
     "id": 7,
     "description":"",
-    "discount": 4
+    "discount": 4,
+    "availableStock": 8
   },
   "8": {
     "name": "Wardrobe",
@@ -61,7 +68,8 @@
     "imagePath": "five.jpg",
     "id": 8,
     "description":"",
-    "discount": 1
+    "discount": 1,
+    "availableStock": 6
   },
   "9": {
     "name": "Fan",
@@ -69,7 +77,8 @@
     "imagePath": "six.jpg",
     "id": 9,
     "description":"",
-    "discount": 9
+    "discount": 9,
+    "availableStock": 5
   },
   "10": {
     "name": "Ballon",
@@ -77,7 +86,8 @@
     "imagePath": "seven.jpg",
     "id": 10,
     "description":"",
-    "discount": 4
+    "discount": 4,
+    "availableStock": 4
   },
   "11": {
     "name": "Camera",
@@ -85,7 +95,8 @@
     "imagePath": "eight.jpg",
     "id": 11,
     "description":"",
-    "discount": 8
+    "discount": 8,
+    "availableStock": 4
   },
   "12": {
     "name": "Remote",
@@ -93,7 +104,8 @@
     "imagePath": "nine.jpg",
     "id": 12,
     "description":"",
-    "discount": 7
+    "discount": 7,
+    "availableStock": 2
   },
   "13": {
     "name": "Speaker",
@@ -101,7 +113,8 @@
     "imagePath": "ten.jpg",
     "id": 13,
     "description":"",
-    "discount": 6
+    "discount": 6,
+    "availableStock": 9
   },
   "14": {
     "name": "Television",
@@ -109,6 +122,7 @@
     "imagePath": "eleven.jpg",
     "id": 14,
     "description":"",
-    "discount": 7
+    "discount": 7,
+    "availableStock": 8
   }
 }

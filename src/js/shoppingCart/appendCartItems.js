@@ -46,7 +46,7 @@ function appendCartItems(itemId, quantity) {
 
     const cartItemQuantityMinus = createElement('button',
         {id: 'minusitem-'+itemId, class: 'minus'},
-        '+',
+        '-',
         {click: removeItemFromCart} );
 
     cartItemQuantityDiv.appendChild(cartItemQuantityMinus);
